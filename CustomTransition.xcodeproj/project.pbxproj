@@ -9,21 +9,37 @@
 /* Begin PBXBuildFile section */
 		30C2F8B02674DD53006415BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C2F8AF2674DD53006415BC /* AppDelegate.swift */; };
 		30C2F8B22674DD53006415BC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C2F8B12674DD53006415BC /* SceneDelegate.swift */; };
-		30C2F8B42674DD53006415BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C2F8B32674DD53006415BC /* ViewController.swift */; };
-		30C2F8B72674DD53006415BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30C2F8B52674DD53006415BC /* Main.storyboard */; };
+		30C2F8B42674DD53006415BC /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C2F8B32674DD53006415BC /* PageViewController.swift */; };
 		30C2F8B92674DD64006415BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30C2F8B82674DD64006415BC /* Assets.xcassets */; };
 		30C2F8BC2674DD64006415BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30C2F8BA2674DD64006415BC /* LaunchScreen.storyboard */; };
+		30C2F8C42674E950006415BC /* Riddles.plist in Resources */ = {isa = PBXBuildFile; fileRef = 30C2F8C32674E950006415BC /* Riddles.plist */; };
+		30C2F8CC2674FEB0006415BC /* RiddleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C2F8CB2674FEB0006415BC /* RiddleModel.swift */; };
+		30C2F8CF2674FF37006415BC /* RiddleStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C2F8CE2674FF37006415BC /* RiddleStorage.swift */; };
+		30C2F8D5267501A5006415BC /* CardViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30C2F8D4267501A5006415BC /* CardViewController.storyboard */; };
+		30C2F8D7267501B6006415BC /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C2F8D6267501B6006415BC /* CardViewController.swift */; };
+		30C2F8DB267502B1006415BC /* StoryboardHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C2F8DA267502B1006415BC /* StoryboardHelpers.swift */; };
+		30C2F8DD26750308006415BC /* AnimationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C2F8DC26750308006415BC /* AnimationHelper.swift */; };
+		30C2F8E026750509006415BC /* Reveal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30C2F8DF26750509006415BC /* Reveal.storyboard */; };
+		30C2F8E226750517006415BC /* RevealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C2F8E126750517006415BC /* RevealViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		30C2F8AC2674DD53006415BC /* CustomTransition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomTransition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30C2F8AF2674DD53006415BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30C2F8B12674DD53006415BC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		30C2F8B32674DD53006415BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		30C2F8B62674DD53006415BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		30C2F8B32674DD53006415BC /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		30C2F8B82674DD64006415BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30C2F8BB2674DD64006415BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		30C2F8BD2674DD64006415BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30C2F8C32674E950006415BC /* Riddles.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Riddles.plist; sourceTree = "<group>"; };
+		30C2F8CB2674FEB0006415BC /* RiddleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiddleModel.swift; sourceTree = "<group>"; };
+		30C2F8CE2674FF37006415BC /* RiddleStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiddleStorage.swift; sourceTree = "<group>"; };
+		30C2F8D4267501A5006415BC /* CardViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CardViewController.storyboard; sourceTree = "<group>"; };
+		30C2F8D6267501B6006415BC /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
+		30C2F8DA267502B1006415BC /* StoryboardHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardHelpers.swift; sourceTree = "<group>"; };
+		30C2F8DC26750308006415BC /* AnimationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationHelper.swift; sourceTree = "<group>"; };
+		30C2F8DF26750509006415BC /* Reveal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Reveal.storyboard; sourceTree = "<group>"; };
+		30C2F8E126750517006415BC /* RevealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevealViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +74,85 @@
 			children = (
 				30C2F8AF2674DD53006415BC /* AppDelegate.swift */,
 				30C2F8B12674DD53006415BC /* SceneDelegate.swift */,
-				30C2F8B32674DD53006415BC /* ViewController.swift */,
-				30C2F8B52674DD53006415BC /* Main.storyboard */,
-				30C2F8B82674DD64006415BC /* Assets.xcassets */,
-				30C2F8BA2674DD64006415BC /* LaunchScreen.storyboard */,
-				30C2F8BD2674DD64006415BC /* Info.plist */,
+				30C2F8E32675ABD5006415BC /* ViewControllers */,
+				30C2F8D126750078006415BC /* Models */,
+				30C2F8CD2674FF19006415BC /* Data */,
+				30C2F8D926750288006415BC /* Helpers */,
+				30C2F8D026750062006415BC /* Assests */,
+				30C2F8D326750091006415BC /* SupportingFiles */,
 			);
 			path = CustomTransition;
+			sourceTree = "<group>";
+		};
+		30C2F8CD2674FF19006415BC /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				30C2F8C32674E950006415BC /* Riddles.plist */,
+				30C2F8CE2674FF37006415BC /* RiddleStorage.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		30C2F8D026750062006415BC /* Assests */ = {
+			isa = PBXGroup;
+			children = (
+				30C2F8B82674DD64006415BC /* Assets.xcassets */,
+			);
+			path = Assests;
+			sourceTree = "<group>";
+		};
+		30C2F8D126750078006415BC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				30C2F8CB2674FEB0006415BC /* RiddleModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		30C2F8D326750091006415BC /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				30C2F8BD2674DD64006415BC /* Info.plist */,
+				30C2F8BA2674DD64006415BC /* LaunchScreen.storyboard */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		30C2F8D8267501C5006415BC /* CardViewController */ = {
+			isa = PBXGroup;
+			children = (
+				30C2F8D4267501A5006415BC /* CardViewController.storyboard */,
+				30C2F8D6267501B6006415BC /* CardViewController.swift */,
+			);
+			path = CardViewController;
+			sourceTree = "<group>";
+		};
+		30C2F8D926750288006415BC /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				30C2F8DA267502B1006415BC /* StoryboardHelpers.swift */,
+				30C2F8DC26750308006415BC /* AnimationHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		30C2F8DE267504ED006415BC /* RevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				30C2F8DF26750509006415BC /* Reveal.storyboard */,
+				30C2F8E126750517006415BC /* RevealViewController.swift */,
+			);
+			path = RevealViewController;
+			sourceTree = "<group>";
+		};
+		30C2F8E32675ABD5006415BC /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				30C2F8B32674DD53006415BC /* PageViewController.swift */,
+				30C2F8D8267501C5006415BC /* CardViewController */,
+				30C2F8DE267504ED006415BC /* RevealViewController */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,8 +213,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				30C2F8BC2674DD64006415BC /* LaunchScreen.storyboard in Resources */,
+				30C2F8D5267501A5006415BC /* CardViewController.storyboard in Resources */,
 				30C2F8B92674DD64006415BC /* Assets.xcassets in Resources */,
-				30C2F8B72674DD53006415BC /* Main.storyboard in Resources */,
+				30C2F8C42674E950006415BC /* Riddles.plist in Resources */,
+				30C2F8E026750509006415BC /* Reveal.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,7 +227,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30C2F8B42674DD53006415BC /* ViewController.swift in Sources */,
+				30C2F8DD26750308006415BC /* AnimationHelper.swift in Sources */,
+				30C2F8B42674DD53006415BC /* PageViewController.swift in Sources */,
+				30C2F8CC2674FEB0006415BC /* RiddleModel.swift in Sources */,
+				30C2F8DB267502B1006415BC /* StoryboardHelpers.swift in Sources */,
+				30C2F8E226750517006415BC /* RevealViewController.swift in Sources */,
+				30C2F8D7267501B6006415BC /* CardViewController.swift in Sources */,
+				30C2F8CF2674FF37006415BC /* RiddleStorage.swift in Sources */,
 				30C2F8B02674DD53006415BC /* AppDelegate.swift in Sources */,
 				30C2F8B22674DD53006415BC /* SceneDelegate.swift in Sources */,
 			);
@@ -146,14 +242,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		30C2F8B52674DD53006415BC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				30C2F8B62674DD53006415BC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		30C2F8BA2674DD64006415BC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -288,7 +376,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TQU76263MV;
-				INFOPLIST_FILE = CustomTransition/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CustomTransition/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,7 +395,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TQU76263MV;
-				INFOPLIST_FILE = CustomTransition/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CustomTransition/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

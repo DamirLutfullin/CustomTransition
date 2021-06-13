@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>Бегемот</string>
+		<key>description</key>
+		<string>у него огромный рот,
+Он зовется...</string>
+		<key>imageName</key>
+		<string>begemot</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Белка</string>
+		<key>description</key>
+		<string>Хожу в пушистой шубе,
+Живу в густом лесу.
+В дупле на старом дубе
+Орешки я грызу.</string>
+		<key>imageName</key>
+		<string>belka</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Кошка</string>
+		<key>description</key>
+		<string>Без расчески причесался
+И умылся без воды,
+В кресло мягкое забрался
+И запел на все лады.</string>
+		<key>imageName</key>
+		<string>cat</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Собака</string>
+		<key>description</key>
+		<string>Ушки чуткие торчком,
+Хвост взлохмаченный крючком,
+В дом чужого не пущу,
+Без хозяина грущу.</string>
+		<key>imageName</key>
+		<string>dog</string>
+	</dict>
+</array>
+</plist>

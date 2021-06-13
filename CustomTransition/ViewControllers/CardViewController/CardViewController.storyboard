@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Card View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="CardViewController" id="Y6W-OH-hqX" customClass="CardViewController" customModule="CustomTransition" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QyV-RV-86X">
+                                <rect key="frame" x="16" y="60" width="382" height="786"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iPk-BP-byd">
+                                        <rect key="frame" x="170.5" y="383" width="41.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.078886255745556341" green="0.30552534623579541" blue="0.13756862732616898" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="iPk-BP-byd" firstAttribute="centerX" secondItem="QyV-RV-86X" secondAttribute="centerX" id="4nk-qo-7ht"/>
+                                    <constraint firstItem="iPk-BP-byd" firstAttribute="centerY" secondItem="QyV-RV-86X" secondAttribute="centerY" id="Pj4-fk-DGc"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="VDr-zj-mRX" appends="YES" id="9cg-t6-Zgm"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="QyV-RV-86X" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="FTT-zT-aJw"/>
+                            <constraint firstItem="QyV-RV-86X" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="dwT-ab-cwW"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="QyV-RV-86X" secondAttribute="bottom" constant="16" id="kv7-cv-Z0d"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="QyV-RV-86X" secondAttribute="trailing" constant="16" id="zS5-3H-Wge"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cardView" destination="QyV-RV-86X" id="ZJM-Ez-7u1"/>
+                        <outlet property="titleLabel" destination="iPk-BP-byd" id="qFg-7B-VIv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="VDr-zj-mRX">
+                    <connections>
+                        <action selector="handleTap" destination="Y6W-OH-hqX" id="igS-qr-QeW"/>
+                        <segue destination="DNz-46-Uil" kind="presentation" identifier="reveal" id="sCy-hb-XDv"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="63.768115942028992" y="79.6875"/>
+        </scene>
+        <!--Reveal-->
+        <scene sceneID="Zl5-zN-Qo3">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Reveal" id="DNz-46-Uil" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4mj-xs-8DW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="611" y="80"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
