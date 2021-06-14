@@ -55,7 +55,7 @@
                 <tapGestureRecognizer id="VDr-zj-mRX">
                     <connections>
                         <action selector="handleTap" destination="Y6W-OH-hqX" id="igS-qr-QeW"/>
-                        <segue destination="DNz-46-Uil" kind="presentation" identifier="reveal" id="sCy-hb-XDv"/>
+                        <segue destination="DNz-46-Uil" kind="presentation" identifier="reveal" modalPresentationStyle="fullScreen" id="sCy-hb-XDv"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

@@ -22,12 +22,14 @@ class CardViewController: UIViewController {
         titleLabel.text = petCard?.description
         cardView.layer.cornerRadius = CardViewController.cardCornerRadius
         cardView.layer.masksToBounds = true
+//        self.transitioningDelegate = self
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segueIdentifier(for: segue) == .reveal,
            let destinationViewController = segue.destination as? RevealViewController {
             destinationViewController.petCard = petCard
+            destinationViewController.transitioningDelegate = self
         }
     }
     
@@ -41,3 +43,32 @@ extension CardViewController: SegueHandlerType {
         case reveal
     }
 }
+
+extension CardViewController: UIViewControllerTransitioningDelegate {
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        FlipPresentAnimationController(originFrame: cardView.frame)
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController)
+      -> UIViewControllerAnimatedTransitioning? {
+      guard let revealVC = dismissed as? RevealViewController else {
+        return nil
+      }
+      return FlipDismissAnimationController(destinationFrame: cardView.frame, interactionController: revealVC.swipeInteractionController)
+    }
+    
+    func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning)
+      -> UIViewControllerInteractiveTransitioning? {
+      guard let animator = animator as? FlipDismissAnimationController,
+            let interactionController = animator.interactionController,
+            interactionController.interactionInProgress
+        else {
+          return nil
+      }
+      return interactionController
+    }
+}
+
+
+

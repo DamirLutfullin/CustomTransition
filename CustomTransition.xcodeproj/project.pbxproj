@@ -21,6 +21,9 @@
 		30C2F8DD26750308006415BC /* AnimationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C2F8DC26750308006415BC /* AnimationHelper.swift */; };
 		30C2F8E026750509006415BC /* Reveal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30C2F8DF26750509006415BC /* Reveal.storyboard */; };
 		30C2F8E226750517006415BC /* RevealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C2F8E126750517006415BC /* RevealViewController.swift */; };
+		30C2F8E62675AE18006415BC /* FlipPresentAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C2F8E52675AE18006415BC /* FlipPresentAnimationController.swift */; };
+		30C2F8EA26777287006415BC /* UIPercentDrivenInteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C2F8E926777287006415BC /* UIPercentDrivenInteractiveTransition.swift */; };
+		30C2F8EC26778302006415BC /* FlipDismissAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C2F8EB26778302006415BC /* FlipDismissAnimationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,9 @@
 		30C2F8DC26750308006415BC /* AnimationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationHelper.swift; sourceTree = "<group>"; };
 		30C2F8DF26750509006415BC /* Reveal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Reveal.storyboard; sourceTree = "<group>"; };
 		30C2F8E126750517006415BC /* RevealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevealViewController.swift; sourceTree = "<group>"; };
+		30C2F8E52675AE18006415BC /* FlipPresentAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipPresentAnimationController.swift; sourceTree = "<group>"; };
+		30C2F8E926777287006415BC /* UIPercentDrivenInteractiveTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPercentDrivenInteractiveTransition.swift; sourceTree = "<group>"; };
+		30C2F8EB26778302006415BC /* FlipDismissAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlipDismissAnimationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +81,7 @@
 				30C2F8AF2674DD53006415BC /* AppDelegate.swift */,
 				30C2F8B12674DD53006415BC /* SceneDelegate.swift */,
 				30C2F8E32675ABD5006415BC /* ViewControllers */,
+				30C2F8E42675ACC0006415BC /* Transition */,
 				30C2F8D126750078006415BC /* Models */,
 				30C2F8CD2674FF19006415BC /* Data */,
 				30C2F8D926750288006415BC /* Helpers */,
@@ -155,6 +162,16 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		30C2F8E42675ACC0006415BC /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				30C2F8E52675AE18006415BC /* FlipPresentAnimationController.swift */,
+				30C2F8EB26778302006415BC /* FlipDismissAnimationController.swift */,
+				30C2F8E926777287006415BC /* UIPercentDrivenInteractiveTransition.swift */,
+			);
+			path = Transition;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -230,7 +247,10 @@
 				30C2F8DD26750308006415BC /* AnimationHelper.swift in Sources */,
 				30C2F8B42674DD53006415BC /* PageViewController.swift in Sources */,
 				30C2F8CC2674FEB0006415BC /* RiddleModel.swift in Sources */,
+				30C2F8E62675AE18006415BC /* FlipPresentAnimationController.swift in Sources */,
+				30C2F8EA26777287006415BC /* UIPercentDrivenInteractiveTransition.swift in Sources */,
 				30C2F8DB267502B1006415BC /* StoryboardHelpers.swift in Sources */,
+				30C2F8EC26778302006415BC /* FlipDismissAnimationController.swift in Sources */,
 				30C2F8E226750517006415BC /* RevealViewController.swift in Sources */,
 				30C2F8D7267501B6006415BC /* CardViewController.swift in Sources */,
 				30C2F8CF2674FF37006415BC /* RiddleStorage.swift in Sources */,
