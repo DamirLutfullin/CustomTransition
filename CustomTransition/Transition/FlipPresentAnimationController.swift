@@ -41,29 +41,22 @@ class FlipPresentAnimationController: NSObject, UIViewControllerAnimatedTransiti
         
         let duration = transitionDuration (using: transitionContext)
         
-        // 1
         UIView.animateKeyframes(
             withDuration: duration,
             delay: 0,
             options: .calculationModeCubic,
             animations: {
-                // 2
                 UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 1/3) {
                     fromVC.view.layer.transform = AnimationHelper.yRotation(-.pi / 2)
                 }
-                
-                // 3
                 UIView.addKeyframe(withRelativeStartTime: 1/3, relativeDuration: 1/3) {
                     snapshot.layer.transform = AnimationHelper.yRotation(0.0)
                 }
-                
-                // 4
                 UIView.addKeyframe(withRelativeStartTime: 2/3, relativeDuration: 1/3) {
                     snapshot.frame = finalFrame
                     snapshot.layer.cornerRadius = 0
                 }
             },
-            // 5
             completion: { _ in
                 toVC.view.isHidden = false
                 snapshot.removeFromSuperview()

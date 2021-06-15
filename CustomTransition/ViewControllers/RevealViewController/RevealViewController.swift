@@ -13,12 +13,12 @@ class RevealViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     var swipeInteractionController: SwipeInteractionController?
     
-    var petCard: Riddle?
+    var riddleCard: Riddle?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        titleLabel.text = petCard?.name
-        imageView.image = UIImage(named: petCard!.imageName)!
+        titleLabel.text = riddleCard?.name
+        imageView.image = UIImage(named: riddleCard!.imageName)!
         swipeInteractionController = SwipeInteractionController(viewController: self)
     }
     

@@ -55,7 +55,7 @@ extension PageViewController: UIPageViewControllerDataSource {
     private func viewControllerForPage(at index: Int) -> UIViewController {
         let cardViewController: CardViewController = UIStoryboard(storyboard: .card).instantiateViewController()
         cardViewController.pageIndex = index
-        cardViewController.petCard = riddles[index]
+        cardViewController.riddleCard = riddles[index]
         return cardViewController
     }
 }

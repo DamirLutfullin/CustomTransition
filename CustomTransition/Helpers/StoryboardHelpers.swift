@@ -20,7 +20,7 @@ extension StoryboardIdentifiable where Self: UIViewController {
 extension UIViewController: StoryboardIdentifiable { }
 
 extension UIStoryboard {
-
+    
     enum Storyboard: String {
         case main = "Main"
         case card = "CardViewController"

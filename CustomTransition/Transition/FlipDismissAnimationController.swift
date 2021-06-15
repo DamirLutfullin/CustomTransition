@@ -17,7 +17,6 @@ class FlipDismissAnimationController: NSObject, UIViewControllerAnimatedTransiti
         self.interactionController = interactionController
     }
     
-    
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         0.8
     }
@@ -36,9 +35,7 @@ class FlipDismissAnimationController: NSObject, UIViewControllerAnimatedTransiti
         containerView.insertSubview(toVCSnapshot, at: 0)
         containerView.addSubview(fromVCSnapshot)
         
-        
         fromVC.view.isHidden = true
-        toVC.view.isHidden = true
         
         AnimationHelper.perspectiveTransform(for: containerView)
         toVCSnapshot.layer.transform = AnimationHelper.yRotation(-.pi / 2)
@@ -74,4 +71,3 @@ class FlipDismissAnimationController: NSObject, UIViewControllerAnimatedTransiti
             })
     }
 }
-

@@ -15,20 +15,19 @@ class CardViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     
     var pageIndex: Int?
-    var petCard: Riddle?
+    var riddleCard: Riddle?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        titleLabel.text = petCard?.description
+        titleLabel.text = riddleCard?.description
         cardView.layer.cornerRadius = CardViewController.cardCornerRadius
         cardView.layer.masksToBounds = true
-//        self.transitioningDelegate = self
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segueIdentifier(for: segue) == .reveal,
            let destinationViewController = segue.destination as? RevealViewController {
-            destinationViewController.petCard = petCard
+            destinationViewController.riddleCard = riddleCard
             destinationViewController.transitioningDelegate = self
         }
     }
@@ -51,22 +50,22 @@ extension CardViewController: UIViewControllerTransitioningDelegate {
     }
     
     func animationController(forDismissed dismissed: UIViewController)
-      -> UIViewControllerAnimatedTransitioning? {
-      guard let revealVC = dismissed as? RevealViewController else {
-        return nil
-      }
-      return FlipDismissAnimationController(destinationFrame: cardView.frame, interactionController: revealVC.swipeInteractionController)
+    -> UIViewControllerAnimatedTransitioning? {
+        guard let revealVC = dismissed as? RevealViewController else {
+            return nil
+        }
+        return FlipDismissAnimationController(destinationFrame: cardView.frame, interactionController: revealVC.swipeInteractionController)
     }
     
     func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning)
-      -> UIViewControllerInteractiveTransitioning? {
-      guard let animator = animator as? FlipDismissAnimationController,
-            let interactionController = animator.interactionController,
-            interactionController.interactionInProgress
+    -> UIViewControllerInteractiveTransitioning? {
+        guard let animator = animator as? FlipDismissAnimationController,
+              let interactionController = animator.interactionController,
+              interactionController.interactionInProgress
         else {
-          return nil
-      }
-      return interactionController
+            return nil
+        }
+        return interactionController
     }
 }
 
