@@ -22,11 +22,21 @@ class FlipDismissAnimationController: NSObject, UIViewControllerAnimatedTransiti
     }
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
+        let animator = animator(transitionContext: transitionContext)
+        animator.startAnimation()
         
-        guard let fromVC = transitionContext.viewController(forKey: .from),
-              let toVC = transitionContext.viewController(forKey: .to),
-              let fromVCSnapshot = fromVC.view.snapshotView(afterScreenUpdates: true),
-              let toVCSnapshot = toVC.view.snapshotView(afterScreenUpdates: true) else {return}
+    }
+    
+    func interruptibleAnimator(using transitionContext: UIViewControllerContextTransitioning) -> UIViewImplicitlyAnimating {
+        return animator(transitionContext: transitionContext)
+    }
+    
+    func animator(transitionContext: UIViewControllerContextTransitioning) -> UIViewImplicitlyAnimating {
+        
+        let fromVC = transitionContext.viewController(forKey: .from)!
+        let toVC = transitionContext.viewController(forKey: .to)!
+        let fromVCSnapshot = fromVC.view.snapshotView(afterScreenUpdates: true)!
+        let toVCSnapshot = toVC.view.snapshotView(afterScreenUpdates: true)!
         
         let containerView = transitionContext.containerView
         
@@ -42,12 +52,11 @@ class FlipDismissAnimationController: NSObject, UIViewControllerAnimatedTransiti
         
         let duration = transitionDuration(using: transitionContext)
         
-        UIView.animateKeyframes(
-            withDuration: duration,
-            delay: 0,
-            options: .calculationModeCubic,
-            animations: {
-                UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 1/3) {
+        let animator = UIViewPropertyAnimator(duration: duration, curve: .linear)
+        
+        animator.addAnimations {
+            UIView.animateKeyframes(withDuration: duration, delay: 0, animations: {
+                UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 1/3) {
                     fromVCSnapshot.frame = self.endFrame
                     fromVCSnapshot.layer.cornerRadius = CardViewController.cardCornerRadius
                 }
@@ -57,17 +66,21 @@ class FlipDismissAnimationController: NSObject, UIViewControllerAnimatedTransiti
                 UIView.addKeyframe(withRelativeStartTime: 2/3, relativeDuration: 1/3) {
                     toVCSnapshot.layer.transform = AnimationHelper.yRotation(0.0)
                 }
-            },
-            completion: { _ in
-                if transitionContext.transitionWasCancelled {
-                    fromVCSnapshot.removeFromSuperview()
-                    toVCSnapshot.removeFromSuperview()
-                    fromVC.view.isHidden = false
-                } else {
-                    toVC.view.isHidden = false
-                    toVCSnapshot.removeFromSuperview()
-                }
-                transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
             })
+        }
+        
+        animator.addCompletion { _ in
+            if transitionContext.transitionWasCancelled {
+                fromVCSnapshot.removeFromSuperview()
+                toVCSnapshot.removeFromSuperview()
+                fromVC.view.isHidden = false
+                containerView.addSubview(fromVC.view)
+            } else {
+                toVC.view.isHidden = false
+                toVCSnapshot.removeFromSuperview()
+            }
+            transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
+        }
+        return animator
     }
 }
